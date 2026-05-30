@@ -46,7 +46,7 @@
     <RouterLink to="/" class="hover:bg-yellow-300">Northern Province</RouterLink>
 
     </li>
- </ul>
+    </ul>
     </div>
  <Li>
     <RouterLink to="/" class="hover:bg-yellow-300">Western Province</RouterLink>
@@ -54,12 +54,13 @@
  <Li>
     <RouterLink to="/" class="hover:bg-yellow-300">Northern Province</RouterLink>
  </li>
-       <Li>
+
+<Li>
     <RouterLink to="/" class="hover:bg-yellow-300">Southern Province</RouterLink>
-      </li>
+</Li>
     <Li>
     <RouterLink to="/" class="hover:bg-yellow-300">Eastern Province</RouterLink>
- </li>
+ </li> 
  
     
     
