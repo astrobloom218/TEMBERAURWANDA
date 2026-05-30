@@ -15,7 +15,7 @@
         </div>
       </div>
     </section>
-
+    
     <!-- DESTINATIONS -->
     <section class="destinations">
       <h2>Top Destinations</h2>

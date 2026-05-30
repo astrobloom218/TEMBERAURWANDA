@@ -99,6 +99,22 @@
           Contact
         </a>
       </li>
+      <section class="hero">
+  <div class="overlay"></div>
+
+  <!-- Language Dropdown -->
+  <div class="language-dropdown">
+    <select>
+      <option>English</option>
+      <option>Kinyarwanda</option>
+      <option>French</option>
+      <option>Spanish</option>
+    </select>
+  </div>
+  </section>
+
+  <div class="hero-content">
+    </div>
 
     </ul>
   </nav>

@@ -1,81 +1,85 @@
 <template>
-    <footer class="bg-green-800 flex text-white px-8 py-10 mt-10">
-    <div class ="flex flex-wrap justify-betweeen gap-8">
+  <footer class="bg-green-900 text-white py-5 mt-10">
+    <div class="max-w-7xl mx-auto px-6">
 
-        <!--this is about of footer-->
-    <div> 
-         <div> </div>
-        <h3 class="text-yellow-300 font-bold text-lg mb-3">TEMBERURWANDA</h3>
-        <p class="text-sm text-green-200">Discover the beauty of the land of a Thousand hills</p>
+      <!-- Footer Content -->
+      <div class="flex flex-wrap justify-between gap-6 text-sm">
+
+        <!-- Logo / About -->
+        <div>
+          <h3 class="text-yellow-300 font-bold text-base">
+            TEMBERURWANDA
+          </h3>
+          <p class="text-green-200 text-xs mt-1 max-w-[180px]">
+            Discover the beauty of the Land of a Thousand Hills.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-yellow-300 font-semibold mb-2">
+            Quick Links
+          </h3>
+
+          <ul class="space-y-1 text-xs text-green-200">
+            <li>
+              <RouterLink to="/" class="hover:text-yellow-300">
+                Home
+              </RouterLink>
+            </li>
+
+            <li>
+              <RouterLink to="/about" class="hover:text-yellow-300">
+                About
+              </RouterLink>
+            </li>
+
+            <li>
+              <RouterLink to="/services" class="hover:text-yellow-300">
+                Services
+              </RouterLink>
+            </li>
+
+            <li>
+              <RouterLink to="/contact" class="hover:text-yellow-300">
+                Contact
+              </RouterLink>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Destinations -->
+        <div>
+          <h3 class="text-yellow-300 font-semibold mb-2">
+            Destinations
+          </h3>
+
+          <ul class="space-y-1 text-xs text-green-200">
+            <li>Northern</li>
+            <li>Western</li>
+            <li>Southern</li>
+            <li>Eastern</li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-yellow-300 font-semibold mb-2">
+            Contact
+          </h3>
+
+          <ul class="space-y-1 text-xs text-green-200">
+            <li>📧 info@temberurwanda.com</li>
+            <li>📞 +250 788 823 626</li>
+            <li>📍 Kigali, Rwanda</li>
+          </ul>
+        </div>
       </div>
 
+      <!-- Copyright -->
+      <div class="border-t border-green-700 mt-4 pt-2 text-center text-[11px] text-green-300">
+        © 2025 TEMBERURWANDA
+      </div>
     </div>
-
-
-
-    <!--Quick Links  -->
-    <div>
-        <h3 class="text-yellow-300  font-bold text-lg mb-3">Quick Links</h3>
-        <ul class="space-y-2 text-sm">
-        <li>
-            <RouterLink to="/" class="hover:text-yellow-300">Home</RouterLink>
-        </li>
-    </ul>
-    <ul>
-    <li>
-
-            <RouterLink to="/about" class="hover:text-yellow-300">About Us</RouterLink>
-        </li>
-    </ul>
-    <ul>
-    <li>
-            <RouterLink to="/Services" class="hover:text-yellow-300">Services</RouterLink>
-        </li>
-    </ul>
-    <ul>
-    <li>
-            <RouterLink to="/Conmtact" class="hover:text-yellow-300">Contact</RouterLink>
-        </li>
-    </ul>
-    </div>          
-            <!-- Destinations -->
-            <div>
-    <h3 class="text-yellow-300 font-bold text-lg mb-3">Destinations</h3>
-    <ul class="space-y-2 text-sm">
-    <Li>
-    <RouterLink to="/" class="hover:bg-yellow-300">Northern Province</RouterLink>
-
-    </li>
-    </ul>
-    </div>
- <Li>
-    <RouterLink to="/" class="hover:bg-yellow-300">Western Province</RouterLink>
- </li>
- <Li>
-    <RouterLink to="/" class="hover:bg-yellow-300">Northern Province</RouterLink>
- </li>
-
-<Li>
-    <RouterLink to="/" class="hover:bg-yellow-300">Southern Province</RouterLink>
-</Li>
-    <Li>
-    <RouterLink to="/" class="hover:bg-yellow-300">Eastern Province</RouterLink>
- </li> 
- 
-    
-    
-    <!-- Contact Info -->
-    <div>
-        <h3 class="text-yellow-300 font-bold text-lg mb-3">Contact</h3>
-        <ul class="space-y-2 text-green-300">
-            <li>ahantunyaburanga@gmail.com</li>
-            <li>+078882362666262</li>
-            <li>Kagugu Kigali Rwanda</li>
-        </ul>
-        </div>
-        <!--place for copuyright-->
-        <div class="border-t border-green-600 mt-8 pt-4 text-sm text-">
-        <p class="text-center">c 2025 Visit Rwanda. All rights reserved</p>
-        </div>
-    </footer>
+  </footer>
 </template>
