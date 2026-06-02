@@ -34,6 +34,23 @@
       </div>
     </section>
 
+    <section class="region-gallery">
+      <div class="section-heading">
+        <span class="eyebrow">Regional photo story</span>
+        <h2>See the places, culture, and mood of {{ destination.region }}.</h2>
+      </div>
+
+      <div class="photo-wall">
+        <article v-for="photo in destination.gallery" :key="photo.title">
+          <img :src="photo.image" :alt="photo.title" loading="lazy" />
+          <div>
+            <span>{{ photo.label }}</span>
+            <h3>{{ photo.title }}</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="cta">
       <h2>Want this region in your itinerary?</h2>
       <RouterLink to="/contact">Request A Custom Trip</RouterLink>
@@ -46,6 +63,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
+const commons = 'https://commons.wikimedia.org/wiki/Special:FilePath/'
 
 const destinations = {
   northern: {
@@ -71,6 +89,28 @@ const destinations = {
         title: 'Musanze Culture',
         text: 'Add traditional dance, local food, craft markets, and community tourism to your mountain stay.',
         image: 'https://source.unsplash.com/900x650/?rwanda,culture,village',
+      },
+    ],
+    gallery: [
+      {
+        label: 'Volcanoes',
+        title: 'Mountain gorilla country',
+        image: 'https://source.unsplash.com/1000x1200/?rwanda,volcanoes,gorilla',
+      },
+      {
+        label: 'Musanze',
+        title: 'Green northern hills',
+        image: 'https://source.unsplash.com/1000x1200/?rwanda,musanze,mountains',
+      },
+      {
+        label: 'Twin Lakes',
+        title: 'Burera and Ruhondo scenery',
+        image: 'https://source.unsplash.com/1000x1200/?rwanda,twin,lakes',
+      },
+      {
+        label: 'Culture',
+        title: 'Intore performance energy',
+        image: `${commons}Rwanda%20IntoreDancers.jpg`,
       },
     ],
   },
@@ -99,6 +139,28 @@ const destinations = {
         image: 'https://source.unsplash.com/900x650/?rwanda,tea,hills',
       },
     ],
+    gallery: [
+      {
+        label: 'Nyungwe',
+        title: 'Rainforest canopy and mist',
+        image: 'https://source.unsplash.com/1000x1200/?rwanda,nyungwe,rainforest',
+      },
+      {
+        label: 'Tea hills',
+        title: 'Southern tea landscapes',
+        image: 'https://source.unsplash.com/1000x1200/?rwanda,tea,plantation',
+      },
+      {
+        label: 'Heritage',
+        title: 'Royal and museum culture',
+        image: 'https://source.unsplash.com/1000x1200/?rwanda,heritage,museum',
+      },
+      {
+        label: 'Dance',
+        title: 'Traditional Rwandan culture',
+        image: `${commons}Traditional%20dance%20for%20Rwandan%20culture.jpg`,
+      },
+    ],
   },
   western: {
     region: 'Western Province',
@@ -125,6 +187,28 @@ const destinations = {
         image: 'https://source.unsplash.com/900x650/?rwanda,coffee,farm',
       },
     ],
+    gallery: [
+      {
+        label: 'Lake Kivu',
+        title: 'Clear western shoreline',
+        image: 'https://source.unsplash.com/1000x1200/?rwanda,lake,kivu',
+      },
+      {
+        label: 'Rubavu',
+        title: 'Beach-town calm',
+        image: 'https://source.unsplash.com/1000x1200/?rubavu,lake,kivu',
+      },
+      {
+        label: 'Coffee',
+        title: 'Coffee routes and farms',
+        image: 'https://source.unsplash.com/1000x1200/?rwanda,coffee,farm',
+      },
+      {
+        label: 'Craft',
+        title: 'Rwandan basket weaving',
+        image: `${commons}BASKET%20WEAVING.jpg`,
+      },
+    ],
   },
   eastern: {
     region: 'Eastern Province',
@@ -149,6 +233,28 @@ const destinations = {
         title: 'Safari Lodges',
         text: 'Pair early drives with comfortable lodges, sundowners, and peaceful nights near the park.',
         image: 'https://source.unsplash.com/900x650/?safari,lodge,rwanda',
+      },
+    ],
+    gallery: [
+      {
+        label: 'Akagera',
+        title: 'Safari plains and wildlife',
+        image: 'https://source.unsplash.com/1000x1200/?akagera,safari,rwanda',
+      },
+      {
+        label: 'Lake Ihema',
+        title: 'Boat safari atmosphere',
+        image: 'https://source.unsplash.com/1000x1200/?rwanda,lake,safari',
+      },
+      {
+        label: 'Savannah',
+        title: 'Golden eastern horizons',
+        image: 'https://source.unsplash.com/1000x1200/?rwanda,savannah,wildlife',
+      },
+      {
+        label: 'Tradition',
+        title: 'Guhamiriza cultural strength',
+        image: `${commons}Rwandan%20men%20performing%20traditional%20dance%20called%20%27GUHAMIRIZA%27.jpg`,
       },
     ],
   },
@@ -209,7 +315,8 @@ h1 {
 }
 
 .overview,
-.highlights {
+.highlights,
+.region-gallery {
   padding: 90px 8%;
 }
 
@@ -278,6 +385,78 @@ h1 {
   line-height: 1.75;
 }
 
+.region-gallery {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(216, 165, 33, 0.14), transparent 22rem),
+    #fff;
+}
+
+.photo-wall {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  perspective: 1200px;
+}
+
+.photo-wall article {
+  position: relative;
+  min-height: 470px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #0b3f2b;
+  box-shadow: 0 18px 50px rgba(22, 58, 40, 0.14);
+  transform-style: preserve-3d;
+  transition: 0.35s ease;
+}
+
+.photo-wall article:first-child {
+  grid-column: span 2;
+}
+
+.photo-wall article:hover {
+  transform: translateY(-12px) rotateX(5deg) rotateY(-3deg);
+}
+
+.photo-wall img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.12) contrast(1.04);
+  transition: 0.45s ease;
+}
+
+.photo-wall article:hover img {
+  transform: scale(1.07);
+}
+
+.photo-wall article::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 42%, rgba(5, 42, 28, 0.92));
+  content: "";
+}
+
+.photo-wall div {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1;
+  color: #fff;
+}
+
+.photo-wall span {
+  color: #d8a521;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.photo-wall h3 {
+  margin-top: 8px;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.08;
+}
+
 .cta {
   padding: 80px 8%;
   text-align: center;
@@ -302,6 +481,18 @@ h1 {
 @media (max-width: 860px) {
   .overview {
     grid-template-columns: 1fr;
+  }
+
+  .photo-wall {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-wall article:first-child {
+    grid-column: auto;
+  }
+
+  .photo-wall article {
+    min-height: 420px;
   }
 }
 </style>

@@ -14,11 +14,11 @@
         <button type="button">Gallery <span>v</span></button>
         <div class="dropdown small">
           <RouterLink to="/photos">
-            <img src="https://source.unsplash.com/240x160/?rwanda,kigali" alt="Rwanda photography preview" />
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rwanda%20IntoreDancers.jpg" alt="Rwandan culture photography preview" />
             <span>Photos</span>
           </RouterLink>
           <RouterLink to="/videos">
-            <img src="https://source.unsplash.com/240x160/?rwanda,tourism" alt="Rwanda video preview" />
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Traditional%20dance%20for%20Rwandan%20culture.jpg" alt="Rwandan traditional dance video preview" />
             <span>Videos</span>
           </RouterLink>
         </div>
@@ -54,30 +54,32 @@
 </template>
 
 <script setup>
+const commons = 'https://commons.wikimedia.org/wiki/Special:FilePath/'
+
 const destinations = [
   {
     slug: 'northern',
     name: 'Northern Province',
     caption: 'Gorillas and volcanoes',
-    image: 'https://source.unsplash.com/240x160/?rwanda,volcanoes,gorilla',
+    image: `${commons}The%20Majestic%20Sabyinyo%20Volcano%20in%20Volcanoes%20National%20Park%2C%20Rwanda.jpg`,
   },
   {
     slug: 'southern',
     name: 'Southern Province',
     caption: 'Culture and rainforest',
-    image: 'https://source.unsplash.com/240x160/?rwanda,nyungwe,forest',
+    image: `${commons}Nyungwe%20National%20Park%20Rwanda.jpg`,
   },
   {
     slug: 'western',
     name: 'Western Province',
     caption: 'Lake Kivu escapes',
-    image: 'https://source.unsplash.com/240x160/?rwanda,lake,kivu',
+    image: `${commons}Lake%20Kivu%2C%20Western%20Rwanda.jpg`,
   },
   {
     slug: 'eastern',
     name: 'Eastern Province',
     caption: 'Akagera safari plains',
-    image: 'https://source.unsplash.com/240x160/?rwanda,akagera,safari',
+    image: `${commons}Akagera%20National%20Park.jpg`,
   },
 ]
 </script>
