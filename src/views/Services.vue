@@ -72,37 +72,37 @@ const services = [
     kicker: 'Wildlife',
     title: 'Gorilla Trekking Permits',
     text: 'Guided Volcanoes National Park planning, permit support, lodge pairing, and clear trek-day preparation.',
-    image: 'https://source.unsplash.com/900x650/?mountain,gorilla,rwanda',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3?auto=format&fit=crop&w=1200&q=85',
   },
   {
     kicker: 'Safari',
     title: 'Akagera Game Drives',
     text: 'Private safari vehicles, expert guides, boat safaris, and sunrise-to-sunset wildlife routes.',
-    image: 'https://source.unsplash.com/900x650/?akagera,safari,rwanda',
+    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85',
   },
   {
     kicker: 'Hotels',
     title: 'Luxury Lodge Booking',
     text: 'Hand-picked resorts and boutique stays in Kigali, Musanze, Nyungwe, Akagera, and Lake Kivu.',
-    image: 'https://source.unsplash.com/900x650/?luxury,lodge,rwanda',
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85',
   },
   {
     kicker: 'Transport',
     title: 'Private Driver Service',
     text: 'Clean vehicles, airport pickup, inter-province transfers, and patient drivers who know the country.',
-    image: 'https://source.unsplash.com/900x650/?rwanda,road,travel',
+    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85',
   },
   {
     kicker: 'Culture',
     title: 'Heritage Experiences',
     text: 'Museum visits, traditional dance, craft villages, food experiences, and respectful community tourism.',
-    image: 'https://source.unsplash.com/900x650/?rwanda,culture,dance',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Rwanda%20IntoreDancers.jpg',
   },
   {
     kicker: 'Nature',
     title: 'Lake And Forest Retreats',
     text: 'Lake Kivu relaxation, Nyungwe canopy walks, tea routes, kayaking, and slow scenic travel.',
-    image: 'https://source.unsplash.com/900x650/?rwanda,lake,forest',
+    image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85',
   },
 ]
 
@@ -159,7 +159,7 @@ const reasons = [
   padding: 90px 8%;
   background:
     linear-gradient(90deg, rgba(5, 42, 28, 0.88), rgba(5, 42, 28, 0.42)),
-    url('https://source.unsplash.com/1800x1100/?rwanda,volcanoes,gorilla') center/cover;
+    url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3?auto=format&fit=crop&w=1800&q=85') center/cover;
 }
 
 .hero-content {
@@ -319,7 +319,7 @@ p {
   text-align: center;
   background:
     linear-gradient(rgba(5, 42, 28, 0.82), rgba(5, 42, 28, 0.82)),
-    url('https://source.unsplash.com/1800x900/?rwanda,lake,kivu') center/cover;
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1800&q=85') center/cover;
   color: #fff;
 }
 

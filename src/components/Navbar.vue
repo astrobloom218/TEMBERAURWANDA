@@ -54,32 +54,30 @@
 </template>
 
 <script setup>
-const commons = 'https://commons.wikimedia.org/wiki/Special:FilePath/'
-
 const destinations = [
   {
     slug: 'northern',
     name: 'Northern Province',
     caption: 'Gorillas and volcanoes',
-    image: `${commons}The%20Majestic%20Sabyinyo%20Volcano%20in%20Volcanoes%20National%20Park%2C%20Rwanda.jpg`,
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3?auto=format&fit=crop&w=500&q=85',
   },
   {
     slug: 'southern',
     name: 'Southern Province',
     caption: 'Culture and rainforest',
-    image: `${commons}Nyungwe%20National%20Park%20Rwanda.jpg`,
+    image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=500&q=85',
   },
   {
     slug: 'western',
     name: 'Western Province',
     caption: 'Lake Kivu escapes',
-    image: `${commons}Lake%20Kivu%2C%20Western%20Rwanda.jpg`,
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=85',
   },
   {
     slug: 'eastern',
     name: 'Eastern Province',
     caption: 'Akagera safari plains',
-    image: `${commons}Akagera%20National%20Park.jpg`,
+    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=500&q=85',
   },
 ]
 </script>

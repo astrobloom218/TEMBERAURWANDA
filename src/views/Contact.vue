@@ -43,7 +43,7 @@
       </div>
 
       <aside class="details-panel">
-        <img src="https://source.unsplash.com/900x700/?rwanda,kigali,travel" alt="Kigali Rwanda travel view" />
+        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1200&q=85" alt="Kigali Rwanda travel view" />
         <div class="detail-grid">
           <article v-for="item in details" :key="item.title">
             <span>{{ item.label }}</span>
@@ -108,7 +108,7 @@ const details = [
   padding: 90px 8%;
   background:
     linear-gradient(90deg, rgba(5, 42, 28, 0.9), rgba(5, 42, 28, 0.36)),
-    url('https://source.unsplash.com/1800x1100/?rwanda,kigali,landscape') center/cover;
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85') center/cover;
 }
 
 .hero-content {

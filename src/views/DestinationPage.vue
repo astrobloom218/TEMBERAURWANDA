@@ -72,40 +72,40 @@ const destinations = {
     intro: 'Northern Rwanda is the dramatic adventure capital: gorilla trekking, volcanic peaks, Musanze culture, and unforgettable green views.',
     promise: 'The iconic Rwanda experience lives in the north.',
     description: 'Base yourself in Musanze for premium lodges, gorilla trekking access, golden monkey hikes, village visits, and scenic drives around Lake Burera and Lake Ruhondo.',
-    heroImage: 'https://source.unsplash.com/1800x1100/?rwanda,volcanoes,gorilla',
-    featuredImage: 'https://source.unsplash.com/1100x850/?rwanda,musanze,mountains',
+    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3?auto=format&fit=crop&w=1800&q=85',
+    featuredImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85',
     highlights: [
       {
         title: 'Volcanoes National Park',
         text: 'Track mountain gorillas, meet golden monkeys, and walk through bamboo forest with expert guides.',
-        image: 'https://source.unsplash.com/900x650/?gorilla,volcanoes,rwanda',
+        image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3?auto=format&fit=crop&w=1200&q=85',
       },
       {
         title: 'Twin Lakes',
         text: 'Enjoy slow boat rides, scenic viewpoints, and peaceful lodge lunches by Burera and Ruhondo.',
-        image: 'https://source.unsplash.com/900x650/?rwanda,twin,lakes',
+        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85',
       },
       {
         title: 'Musanze Culture',
         text: 'Add traditional dance, local food, craft markets, and community tourism to your mountain stay.',
-        image: 'https://source.unsplash.com/900x650/?rwanda,culture,village',
+        image: `${commons}Rwanda%20IntoreDancers.jpg`,
       },
     ],
     gallery: [
       {
         label: 'Volcanoes',
         title: 'Mountain gorilla country',
-        image: 'https://source.unsplash.com/1000x1200/?rwanda,volcanoes,gorilla',
+        image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Musanze',
         title: 'Green northern hills',
-        image: 'https://source.unsplash.com/1000x1200/?rwanda,musanze,mountains',
+        image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Twin Lakes',
         title: 'Burera and Ruhondo scenery',
-        image: 'https://source.unsplash.com/1000x1200/?rwanda,twin,lakes',
+        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Culture',
@@ -120,40 +120,40 @@ const destinations = {
     intro: 'Southern Rwanda blends history and nature through Nyanza, Huye, Nyungwe Forest, museums, palaces, and tea estates.',
     promise: 'The south is Rwanda at its most cultural and richly green.',
     description: 'Travel south for the King\'s Palace Museum, Ethnographic Museum, Nyungwe canopy walk, chimpanzee trekking, and tea landscapes that feel endless.',
-    heroImage: 'https://source.unsplash.com/1800x1100/?rwanda,nyungwe,forest',
-    featuredImage: 'https://source.unsplash.com/1100x850/?rwanda,tea,plantation',
+    heroImage: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=85',
+    featuredImage: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85',
     highlights: [
       {
         title: 'Nyungwe Forest',
         text: 'Walk above the rainforest canopy, track chimpanzees, and explore one of Africa\'s oldest forests.',
-        image: 'https://source.unsplash.com/900x650/?nyungwe,rainforest,rwanda',
+        image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85',
       },
       {
         title: 'Nyanza Royal Heritage',
         text: 'Visit royal history sites and learn how Rwanda\'s cultural identity was shaped.',
-        image: 'https://source.unsplash.com/900x650/?rwanda,heritage,museum',
+        image: `${commons}Traditional%20dance%20for%20Rwandan%20culture.jpg`,
       },
       {
         title: 'Tea Country',
         text: 'Drive through bright green estates, stop for tastings, and photograph quiet highland scenery.',
-        image: 'https://source.unsplash.com/900x650/?rwanda,tea,hills',
+        image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85',
       },
     ],
     gallery: [
       {
         label: 'Nyungwe',
         title: 'Rainforest canopy and mist',
-        image: 'https://source.unsplash.com/1000x1200/?rwanda,nyungwe,rainforest',
+        image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Tea hills',
         title: 'Southern tea landscapes',
-        image: 'https://source.unsplash.com/1000x1200/?rwanda,tea,plantation',
+        image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Heritage',
         title: 'Royal and museum culture',
-        image: 'https://source.unsplash.com/1000x1200/?rwanda,heritage,museum',
+        image: `${commons}Rwanda%20IntoreDancers.jpg`,
       },
       {
         label: 'Dance',
@@ -168,40 +168,40 @@ const destinations = {
     intro: 'Western Rwanda is the country\'s soft landing: lakeside resorts, coffee experiences, boat rides, and beautiful roads between Rubavu, Karongi, and Rusizi.',
     promise: 'The west is where Rwanda slows down beautifully.',
     description: 'Use the western route for relaxation after trekking or safari. Lake Kivu brings swimming, kayaking, islands, coffee washing stations, and sunset dining.',
-    heroImage: 'https://source.unsplash.com/1800x1100/?rwanda,lake,kivu',
-    featuredImage: 'https://source.unsplash.com/1100x850/?lake,kivu,rwanda',
+    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1800&q=85',
+    featuredImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85',
     highlights: [
       {
         title: 'Rubavu Beaches',
         text: 'Stay by the lake, enjoy waterfront restaurants, and take easy boat trips near the border city.',
-        image: 'https://source.unsplash.com/900x650/?rubavu,lake,kivu',
+        image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85',
       },
       {
         title: 'Karongi Islands',
         text: 'Cruise to small islands, watch sunset over the water, and enjoy calm boutique stays.',
-        image: 'https://source.unsplash.com/900x650/?lake,kivu,island',
+        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85',
       },
       {
         title: 'Coffee Experiences',
         text: 'Visit washing stations and taste Rwandan coffee close to the farms that produce it.',
-        image: 'https://source.unsplash.com/900x650/?rwanda,coffee,farm',
+        image: 'https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1200&q=85',
       },
     ],
     gallery: [
       {
         label: 'Lake Kivu',
         title: 'Clear western shoreline',
-        image: 'https://source.unsplash.com/1000x1200/?rwanda,lake,kivu',
+        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Rubavu',
         title: 'Beach-town calm',
-        image: 'https://source.unsplash.com/1000x1200/?rubavu,lake,kivu',
+        image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Coffee',
         title: 'Coffee routes and farms',
-        image: 'https://source.unsplash.com/1000x1200/?rwanda,coffee,farm',
+        image: 'https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Craft',
@@ -216,40 +216,40 @@ const destinations = {
     intro: 'Eastern Rwanda is safari country, centered around Akagera National Park, big wildlife, lake systems, and open savannah views.',
     promise: 'The east brings the safari energy.',
     description: 'Plan game drives, boat safaris, lodge stays, birding, and warm sunrise routes through one of Rwanda\'s most exciting conservation landscapes.',
-    heroImage: 'https://source.unsplash.com/1800x1100/?akagera,safari,rwanda',
-    featuredImage: 'https://source.unsplash.com/1100x850/?rwanda,safari,wildlife',
+    heroImage: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85',
+    featuredImage: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=85',
     highlights: [
       {
         title: 'Akagera Game Drives',
         text: 'Look for lions, elephants, giraffes, zebras, antelope, buffalo, and wide-open landscapes.',
-        image: 'https://source.unsplash.com/900x650/?akagera,wildlife,rwanda',
+        image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85',
       },
       {
         title: 'Lake Ihema Boat Safari',
         text: 'See hippos, crocodiles, water birds, and park scenery from the water.',
-        image: 'https://source.unsplash.com/900x650/?rwanda,lake,safari',
+        image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=85',
       },
       {
         title: 'Safari Lodges',
         text: 'Pair early drives with comfortable lodges, sundowners, and peaceful nights near the park.',
-        image: 'https://source.unsplash.com/900x650/?safari,lodge,rwanda',
+        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85',
       },
     ],
     gallery: [
       {
         label: 'Akagera',
         title: 'Safari plains and wildlife',
-        image: 'https://source.unsplash.com/1000x1200/?akagera,safari,rwanda',
+        image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Lake Ihema',
         title: 'Boat safari atmosphere',
-        image: 'https://source.unsplash.com/1000x1200/?rwanda,lake,safari',
+        image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Savannah',
         title: 'Golden eastern horizons',
-        image: 'https://source.unsplash.com/1000x1200/?rwanda,savannah,wildlife',
+        image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1200&q=85',
       },
       {
         label: 'Tradition',

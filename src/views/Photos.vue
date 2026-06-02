@@ -59,7 +59,7 @@ const photos = [
     place: 'Amaraba',
     title: 'Rwandese women performing traditional dance',
     text: 'Elegant choreography, fabric, and movement from a Rwandan performance.',
-    image: `${commons}Rwandese%20women%20performing%20a%20traditional%20dance%20called%20%22.jpg`,
+    image: `${commons}Traditional%20dance%20for%20Rwandan%20culture.jpg`,
   },
   {
     place: 'Agaseke',

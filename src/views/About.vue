@@ -12,7 +12,7 @@
     </section>
 
     <section class="story">
-      <img src="https://source.unsplash.com/1000x850/?rwanda,people,culture" alt="Rwandan cultural experience" />
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rwanda%20IntoreDancers.jpg" alt="Rwandan cultural experience" />
       <div>
         <span class="eyebrow">Our story</span>
         <h2>Local knowledge meets luxury travel planning.</h2>
@@ -37,9 +37,9 @@
     </section>
 
     <section class="gallery-strip">
-      <img src="https://source.unsplash.com/700x900/?rwanda,gorilla" alt="Rwanda gorilla trekking" />
-      <img src="https://source.unsplash.com/700x900/?rwanda,lake,kivu" alt="Lake Kivu Rwanda" />
-      <img src="https://source.unsplash.com/700x900/?rwanda,akagera" alt="Akagera safari Rwanda" />
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3?auto=format&fit=crop&w=900&q=85" alt="Rwanda gorilla trekking" />
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=85" alt="Lake Kivu Rwanda" />
+      <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=85" alt="Akagera safari Rwanda" />
     </section>
   </main>
 </template>
@@ -77,7 +77,7 @@ const values = [
   padding: 90px 8%;
   background:
     linear-gradient(90deg, rgba(5, 42, 28, 0.9), rgba(5, 42, 28, 0.28)),
-    url('https://source.unsplash.com/1800x1100/?rwanda,hills') center/cover;
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85') center/cover;
 }
 
 .hero-content {

@@ -60,28 +60,28 @@ const destinations = [
     region: 'Northern Province',
     title: 'Volcanoes and gorillas',
     text: 'Iconic trekking, twin lakes, Musanze culture, and cool mountain lodges.',
-    image: 'https://source.unsplash.com/900x700/?rwanda,volcanoes,gorilla',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3?auto=format&fit=crop&w=1200&q=85',
     to: '/destinations/northern',
   },
   {
     region: 'Southern Province',
     title: 'Nyungwe and heritage',
     text: 'Rainforest canopy walks, royal history, tea estates, and deep culture.',
-    image: 'https://source.unsplash.com/900x700/?rwanda,nyungwe,forest',
+    image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85',
     to: '/destinations/southern',
   },
   {
     region: 'Western Province',
     title: 'Lake Kivu escapes',
     text: 'Lakeside resorts, islands, coffee routes, and golden evening views.',
-    image: 'https://source.unsplash.com/900x700/?rwanda,lake,kivu',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85',
     to: '/destinations/western',
   },
   {
     region: 'Eastern Province',
     title: 'Akagera safari plains',
     text: 'Game drives, boat safaris, wildlife lodges, and big open horizons.',
-    image: 'https://source.unsplash.com/900x700/?akagera,safari,rwanda',
+    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85',
     to: '/destinations/eastern',
   },
 ]
@@ -101,7 +101,7 @@ const destinations = [
   padding: 90px 8%;
   background:
     linear-gradient(120deg, rgba(5, 42, 28, 0.9), rgba(5, 42, 28, 0.2)),
-    url('https://source.unsplash.com/1900x1200/?rwanda,landscape') center/cover;
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1900&q=85') center/cover;
   isolation: isolate;
 }
 
@@ -264,7 +264,7 @@ h1 {
   padding: 90px 8%;
   background:
     linear-gradient(120deg, rgba(5, 42, 28, 0.92), rgba(13, 107, 67, 0.78)),
-    url('https://source.unsplash.com/1800x900/?rwanda,kigali') center/cover;
+    url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1800&q=85') center/cover;
   color: #fff;
 }
 
