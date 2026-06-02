@@ -1,293 +1,298 @@
 <template>
-  <div class="home">
-
-    <!-- HERO SECTION -->
+  <main class="home-page">
     <section class="hero">
-      <div class="overlay"></div>
-
-      <div class="hero-content">
-        <h1>The Land of a Thousand Hills</h1>
-       
-
-        <div class="hero-buttons">
-          <button class="btn-primary">Explore Rwanda</button>
-          <button class="btn-secondary">Book Adventure</button>
+      <div class="hero-scene">
+        <div class="hero-card glass-surface">
+          <span class="eyebrow">Visit Rwanda in style</span>
+          <h1>Rwanda, designed like a dream itinerary.</h1>
+          <p>
+            Gorilla trekking, Akagera safaris, Lake Kivu sunsets, Nyungwe rainforest,
+            and Kigali culture shaped into one premium travel experience.
+          </p>
+          <div class="hero-actions">
+            <RouterLink to="/services">Explore Services</RouterLink>
+            <RouterLink to="/destinations/northern">See Destinations</RouterLink>
+          </div>
         </div>
       </div>
     </section>
-    
-    <!-- DESTINATIONS -->
-    <section class="destinations">
-      <h2>Top Destinations</h2>
 
-      <div class="card-container">
+    <section class="showcase">
+      <div class="section-heading">
+        <span class="eyebrow">The routes everyone remembers</span>
+        <h2>Four powerful regions, one unforgettable country.</h2>
+      </div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1000" alt="Volcanoes National Park">
-          <div class="card-content">
-            <h3>Volcanoes National Park</h3>
-            <p>
-              Experience mountain gorillas and beautiful volcanic landscapes.
-            </p>
+      <div class="destination-grid">
+        <RouterLink
+          v-for="card in destinations"
+          :key="card.title"
+          :to="card.to"
+          class="destination-card"
+        >
+          <img :src="card.image" :alt="card.title" />
+          <div>
+            <span>{{ card.region }}</span>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.text }}</p>
           </div>
-        </div>
-
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1000" alt="Lake Kivu">
-          <div class="card-content">
-            <h3>Lake Kivu</h3>
-            <p>
-              Relax on peaceful beaches and enjoy luxury lakeside resorts.
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1000" alt="Akagera National Park">
-          <div class="card-content">
-            <h3>Akagera National Park</h3>
-            <p>
-              Discover wildlife safaris, lions, elephants and unforgettable views.
-            </p>
-          </div>
-        </div>
-
+        </RouterLink>
       </div>
     </section>
 
-    <!-- WHY VISIT -->
-    <section class="why-rwanda">
-      <h2>Why Visit Rwanda?</h2>
-
-      <div class="features">
-
-        <div class="feature-box">
-          <h3>🌍 Beautiful Nature</h3>
-          <p>Green hills, lakes, volcanoes and amazing wildlife.</p>
-        </div>
-
-        <div class="feature-box">
-          <h3>🦍 Gorilla Trekking</h3>
-          <p>Get close to the rare mountain gorillas.</p>
-        </div>
-
-        <div class="feature-box">
-          <h3>🏕️ Luxury Adventures</h3>
-          <p>Experience safaris, resorts and unforgettable journeys.</p>
-        </div>
-
+    <section class="cinematic-band">
+      <div>
+        <span class="eyebrow">Peak travel energy</span>
+        <h2>Private, polished, and built around the moments you came for.</h2>
+      </div>
+      <div class="stats">
+        <article><strong>4</strong><span>National parks</span></article>
+        <article><strong>30+</strong><span>Signature routes</span></article>
+        <article><strong>24/7</strong><span>Trip support</span></article>
       </div>
     </section>
-
-    <!-- CTA -->
-    <section class="cta">
-      <h2>Your Rwanda Adventure Starts Today</h2>
-      <p>Book your dream destination and experience Rwanda like never before.</p>
-      <button>Start Exploring</button>
-    </section>
-
-  </div>
+  </main>
 </template>
 
+<script setup>
+const destinations = [
+  {
+    region: 'Northern Province',
+    title: 'Volcanoes and gorillas',
+    text: 'Iconic trekking, twin lakes, Musanze culture, and cool mountain lodges.',
+    image: 'https://source.unsplash.com/900x700/?rwanda,volcanoes,gorilla',
+    to: '/destinations/northern',
+  },
+  {
+    region: 'Southern Province',
+    title: 'Nyungwe and heritage',
+    text: 'Rainforest canopy walks, royal history, tea estates, and deep culture.',
+    image: 'https://source.unsplash.com/900x700/?rwanda,nyungwe,forest',
+    to: '/destinations/southern',
+  },
+  {
+    region: 'Western Province',
+    title: 'Lake Kivu escapes',
+    text: 'Lakeside resorts, islands, coffee routes, and golden evening views.',
+    image: 'https://source.unsplash.com/900x700/?rwanda,lake,kivu',
+    to: '/destinations/western',
+  },
+  {
+    region: 'Eastern Province',
+    title: 'Akagera safari plains',
+    text: 'Game drives, boat safaris, wildlife lodges, and big open horizons.',
+    image: 'https://source.unsplash.com/900x700/?akagera,safari,rwanda',
+    to: '/destinations/eastern',
+  },
+]
+</script>
+
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.home-page {
+  color: var(--ink);
+  overflow: hidden;
 }
 
-.home {
-  font-family: Arial, sans-serif;
-}
-
-/* HERO */
 .hero {
   position: relative;
-  height: 100vh;
-  background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  min-height: 92vh;
+  display: grid;
+  place-items: center;
+  padding: 90px 8%;
+  background:
+    linear-gradient(120deg, rgba(5, 42, 28, 0.9), rgba(5, 42, 28, 0.2)),
+    url('https://source.unsplash.com/1900x1200/?rwanda,landscape') center/cover;
+  isolation: isolate;
 }
 
-.overlay {
+.hero::before {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  z-index: -1;
+  background: inherit;
+  content: "";
+  animation: slowZoom 18s ease-in-out infinite alternate;
 }
 
-.hero-content {
-  position: relative;
-  color: white;
-  max-width: 800px;
-  z-index: 2;
-  padding: 20px;
+.hero-scene {
+  width: min(1120px, 100%);
+  perspective: 1200px;
 }
 
-.hero-content h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  color: gold;
+.hero-card {
+  max-width: 760px;
+  padding: clamp(32px, 6vw, 64px);
+  border-radius: 8px;
+  transform-style: preserve-3d;
+  animation: riseIn 0.8s ease both, float3d 7s ease-in-out 1s infinite;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.hero-buttons {
-  margin-top: 30px;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
-.btn-primary,
-.btn-secondary {
-  border: none;
-  padding: 15px 35px;
-  margin: 10px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: 0.4s ease;
+h1 {
+  color: #fff;
+  font-size: clamp(46px, 8vw, 92px);
+  line-height: 0.98;
+  text-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
 }
 
-.btn-primary {
-  background: gold;
+.hero p {
+  margin-top: 24px;
+  color: #f4fbf5;
+  font-size: 21px;
+  line-height: 1.7;
 }
 
-.btn-primary:hover {
-  transform: scale(1.08);
-}
-
-.btn-secondary {
-  background: green;
-  color: white;
-}
-
-.btn-secondary:hover {
-  transform: scale(1.08);
-}
-
-/* DESTINATIONS */
-.destinations {
-  padding: 80px 10%;
-  background: #f8f8f8;
-  text-align: center;
-}
-
-.destinations h2 {
-  font-size: 3rem;
-  margin-bottom: 40px;
-  color: green;
-}
-
-.card-container {
+.hero-actions {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 14px;
+  margin-top: 32px;
 }
 
-.card {
-  width: 340px;
-  background: white;
-  border-radius: 25px;
+.hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 24px;
+  border-radius: 6px;
+  color: #10251c;
+  background: var(--gold);
+  font-weight: 900;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.hero-actions a + a {
+  background: #fff;
+}
+
+.hero-actions a:hover {
+  transform: translateY(-5px) rotateX(8deg);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+}
+
+.showcase {
+  padding: 92px 8%;
+}
+
+.section-heading {
+  max-width: 780px;
+  margin-bottom: 42px;
+}
+
+.section-heading h2,
+.cinematic-band h2 {
+  font-size: clamp(34px, 5vw, 62px);
+  line-height: 1.05;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  perspective: 1000px;
+}
+
+.destination-card {
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  transition: 0.4s;
+  border-radius: 8px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transform-style: preserve-3d;
+  transition: 0.35s ease;
+  animation: riseIn 0.7s ease both;
 }
 
-.card:hover {
-  transform: translateY(-15px);
+.destination-card:hover {
+  transform: translateY(-14px) rotateX(5deg) rotateY(-4deg);
 }
 
-.card img {
+.destination-card img {
   width: 100%;
-  height: 240px;
+  height: 280px;
   object-fit: cover;
+  transition: 0.45s ease;
 }
 
-.card-content {
-  padding: 20px;
-}
-
-.card-content h3 {
-  color: green;
-  margin-bottom: 15px;
-}
-
-/* WHY RWANDA */
-.why-rwanda {
-  padding: 90px 10%;
-  text-align: center;
-}
-
-.why-rwanda h2 {
-  font-size: 3rem;
-  color: gold;
-  margin-bottom: 40px;
-}
-
-.features {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.feature-box {
-  width: 300px;
-  background: white;
-  padding: 30px;
-  border-radius: 25px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  transition: 0.4s;
-}
-
-.feature-box:hover {
-  transform: scale(1.06);
-}
-
-/* CTA */
-.cta {
-  background: linear-gradient(to right, green, gold);
-  text-align: center;
-  padding: 100px 20px;
-  color: white;
-}
-
-.cta h2 {
-  font-size: 3rem;
-}
-
-.cta p {
-  margin: 20px 0;
-  font-size: 1.1rem;
-}
-
-.cta button {
-  border: none;
-  padding: 16px 35px;
-  border-radius: 50px;
-  font-size: 1rem;
-  cursor: pointer;
-  background: white;
-  transition: 0.3s;
-}
-
-.cta button:hover {
+.destination-card:hover img {
   transform: scale(1.08);
 }
 
-@media(max-width:768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
+.destination-card div {
+  padding: 24px;
+}
 
-  .card {
-    width: 100%;
+.destination-card span {
+  color: #b18417;
+  font-weight: 900;
+}
+
+.destination-card h3 {
+  margin-top: 8px;
+  color: var(--leaf);
+  font-size: 25px;
+}
+
+.destination-card p {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.cinematic-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  gap: 40px;
+  align-items: center;
+  padding: 90px 8%;
+  background:
+    linear-gradient(120deg, rgba(5, 42, 28, 0.92), rgba(13, 107, 67, 0.78)),
+    url('https://source.unsplash.com/1800x900/?rwanda,kigali') center/cover;
+  color: #fff;
+}
+
+.stats {
+  display: grid;
+  gap: 16px;
+}
+
+.stats article {
+  padding: 24px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.stats strong,
+.stats span {
+  display: block;
+}
+
+.stats strong {
+  color: var(--gold);
+  font-size: 46px;
+}
+
+@media (max-width: 820px) {
+  .cinematic-band {
+    grid-template-columns: 1fr;
   }
 }
 </style>

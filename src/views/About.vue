@@ -1,437 +1,206 @@
-```vue
 <template>
-  <div class="about-page">
-
-    <!-- HERO -->
+  <main class="about-page">
     <section class="hero">
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <span class="tag">🇷🇼 Welcome To Rwanda</span>
-          <h1>Discover The Heart Of Africa</h1>
-          <p>
-            Visit Rwanda is your gateway to breathtaking mountains, wildlife,
-            culture, luxury tourism, unforgettable adventures, and beautiful
-            landscapes.
-          </p>
-
-          <button>Explore Rwanda</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about-section">
-      <div class="section-title">
-        <h2>About Visit Rwanda</h2>
-        <div class="line"></div>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-image">
-          <img
-            src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5"
-            alt="Rwanda"
-          />
-        </div>
-
-        <div class="about-text">
-          <h3>Experience Rwanda Like Never Before</h3>
-
-          <p>
-            Rwanda is one of Africa’s fastest growing tourism destinations,
-            known for stunning landscapes, clean cities, mountain gorillas,
-            volcanoes, lakes, luxury hotels, and rich culture.
-          </p>
-
-          <p>
-            Our mission is to help visitors discover Rwanda’s hidden treasures
-            while enjoying safe, premium, unforgettable experiences.
-          </p>
-
-          <div class="info-cards">
-            <div class="info-card">
-              <h4>🌍 Tourism</h4>
-              <p>Explore parks, cities, lakes and volcanoes.</p>
-            </div>
-
-            <div class="info-card">
-              <h4>🦍 Wildlife</h4>
-              <p>Meet mountain gorillas and wildlife adventures.</p>
-            </div>
-
-            <div class="info-card">
-              <h4>🏞 Nature</h4>
-              <p>Beautiful landscapes and fresh environments.</p>
-            </div>
-
-            <div class="info-card">
-              <h4>🎭 Culture</h4>
-              <p>Experience Rwandan traditions and heritage.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MISSION -->
-    <section class="mission">
-      <div class="card">
-        <h2>Our Mission</h2>
+      <div class="hero-content">
+        <span class="eyebrow">About Tourism Rwanda</span>
+        <h1>We make Rwanda feel cinematic, personal, and effortless.</h1>
         <p>
-          To promote Rwanda as a premium tourism destination filled with
-          unforgettable travel experiences, nature, luxury, and culture.
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>Our Vision</h2>
-        <p>
-          To inspire millions of travelers around the world to discover the
-          beauty of Rwanda.
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>Our Goal</h2>
-        <p>
-          To help travelers plan their perfect Rwanda experience.
+          Our work is simple: turn Rwanda's nature, culture, wildlife, and hospitality
+          into premium journeys travelers remember for life.
         </p>
       </div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats">
-      <div class="stat-card">
-        <h1>100+</h1>
-        <p>Tourist Attractions</p>
-      </div>
-
-      <div class="stat-card">
-        <h1>4</h1>
-        <p>National Parks</p>
-      </div>
-
-      <div class="stat-card">
-        <h1>1000+</h1>
-        <p>Wildlife Species</p>
-      </div>
-
-      <div class="stat-card">
-        <h1>Millions</h1>
-        <p>Visitors</p>
+    <section class="story">
+      <img src="https://source.unsplash.com/1000x850/?rwanda,people,culture" alt="Rwandan cultural experience" />
+      <div>
+        <span class="eyebrow">Our story</span>
+        <h2>Local knowledge meets luxury travel planning.</h2>
+        <p>
+          Rwanda is compact, clean, beautiful, and full of contrasts: gorilla mountains,
+          rainforest, safari plains, coffee hills, lakeside towns, and a capital city with
+          a calm modern rhythm.
+        </p>
+        <p>
+          We connect those places with smart timing, trusted guides, smooth transport,
+          and stays that match the experience you want.
+        </p>
       </div>
     </section>
 
-    <!-- WHY RWANDA -->
-    <section class="why-rwanda">
-      <div class="section-title">
-        <h2>Why Visit Rwanda?</h2>
-        <div class="line"></div>
-      </div>
-
-      <div class="why-grid">
-        <div class="why-card">
-          <h3>🦍 Gorilla Trekking</h3>
-          <p>Meet mountain gorillas in breathtaking forests.</p>
-        </div>
-
-        <div class="why-card">
-          <h3>🏙 Kigali City</h3>
-          <p>Clean, modern, safe and beautiful city experience.</p>
-        </div>
-
-        <div class="why-card">
-          <h3>🌋 Volcanoes</h3>
-          <p>Adventure through Rwanda’s volcanic mountains.</p>
-        </div>
-
-        <div class="why-card">
-          <h3>🌊 Lakes</h3>
-          <p>Relax near beautiful lakes and luxury resorts.</p>
-        </div>
-      </div>
+    <section class="values">
+      <article v-for="value in values" :key="value.title">
+        <strong>{{ value.number }}</strong>
+        <h3>{{ value.title }}</h3>
+        <p>{{ value.text }}</p>
+      </article>
     </section>
 
-    <!-- CTA -->
-    <section class="cta">
-      <h2>Ready To Explore Rwanda?</h2>
-      <p>
-        Start your unforgettable journey today.
-      </p>
-
-      <button>Book Your Adventure</button>
+    <section class="gallery-strip">
+      <img src="https://source.unsplash.com/700x900/?rwanda,gorilla" alt="Rwanda gorilla trekking" />
+      <img src="https://source.unsplash.com/700x900/?rwanda,lake,kivu" alt="Lake Kivu Rwanda" />
+      <img src="https://source.unsplash.com/700x900/?rwanda,akagera" alt="Akagera safari Rwanda" />
     </section>
-
-  </div>
+  </main>
 </template>
 
+<script setup>
+const values = [
+  {
+    number: '01',
+    title: 'Respectful Tourism',
+    text: 'Experiences are designed to honor communities, culture, parks, and natural spaces.',
+  },
+  {
+    number: '02',
+    title: 'Premium Comfort',
+    text: 'Travel days are planned with good pacing, clean vehicles, quality stays, and clear support.',
+  },
+  {
+    number: '03',
+    title: 'Real Rwanda',
+    text: 'We balance famous highlights with local routes, food, heritage, and quiet scenic places.',
+  },
+]
+</script>
+
 <style scoped>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+.about-page {
+  overflow: hidden;
+  color: var(--ink);
 }
 
-.about-page{
-background:#f5f8f3;
+.hero {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  padding: 90px 8%;
+  background:
+    linear-gradient(90deg, rgba(5, 42, 28, 0.9), rgba(5, 42, 28, 0.28)),
+    url('https://source.unsplash.com/1800x1100/?rwanda,hills') center/cover;
 }
 
-/* HERO */
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,40,0,.6),rgba(0,0,0,.6)),
-url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')
-center/cover;
+.hero-content {
+  max-width: 920px;
+  color: #fff;
+  animation: riseIn 0.8s ease both;
 }
 
-.hero-overlay{
-height:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.hero-content{
-max-width:900px;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
-.tag{
-background:rgba(255,215,0,.2);
-padding:10px 20px;
-border-radius:30px;
-color:gold;
-font-weight:bold;
+h1 {
+  font-size: clamp(44px, 7vw, 82px);
+  line-height: 1.02;
 }
 
-.hero-content h1{
-font-size:80px;
-color:white;
-margin:30px 0;
-line-height:1.1;
+.hero p,
+.story p,
+.values p {
+  line-height: 1.75;
 }
 
-.hero-content p{
-font-size:22px;
-color:#ddd;
-line-height:1.8;
-margin-bottom:30px;
+.hero p {
+  max-width: 760px;
+  margin-top: 24px;
+  color: #edf5ee;
+  font-size: 21px;
 }
 
-.hero-content button{
-padding:18px 40px;
-border:none;
-background:gold;
-border-radius:40px;
-font-size:18px;
-cursor:pointer;
-transition:.4s;
-font-weight:bold;
+.story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+  padding: 95px 8%;
 }
 
-.hero-content button:hover{
-background:white;
-transform:translateY(-5px);
+.story img {
+  width: 100%;
+  min-height: 520px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  animation: float3d 8s ease-in-out infinite;
 }
 
-/* SECTION TITLE */
-.section-title{
-text-align:center;
-margin-bottom:60px;
+.story h2 {
+  font-size: clamp(34px, 5vw, 60px);
+  line-height: 1.05;
 }
 
-.section-title h2{
-font-size:55px;
-color:#0d5c2f;
+.story p {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 18px;
 }
 
-.line{
-width:120px;
-height:5px;
-background:gold;
-margin:auto;
-border-radius:20px;
-margin-top:10px;
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 0 8% 95px;
 }
 
-/* ABOUT */
-.about-section{
-padding:100px 10%;
+.values article {
+  min-height: 260px;
+  padding: 30px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  transform-style: preserve-3d;
+  transition: 0.3s ease;
 }
 
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
+.values article:hover {
+  transform: translateY(-12px) rotateX(5deg);
 }
 
-.about-image img{
-width:100%;
-border-radius:30px;
-box-shadow:0 20px 50px rgba(0,0,0,.2);
+.values strong {
+  color: var(--gold);
+  font-size: 36px;
 }
 
-.about-text h3{
-font-size:45px;
-color:#0d5c2f;
-margin-bottom:20px;
+.values h3 {
+  margin: 12px 0;
+  color: var(--leaf);
+  font-size: 26px;
 }
 
-.about-text p{
-font-size:18px;
-line-height:1.9;
-color:#444;
-margin-bottom:20px;
+.values p {
+  color: var(--muted);
 }
 
-.info-cards{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-margin-top:30px;
+.gallery-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
 }
 
-.info-card{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
-transition:.4s;
-border-top:5px solid gold;
+.gallery-strip img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  filter: saturate(1.08);
 }
 
-.info-card:hover{
-transform:translateY(-10px);
-}
-
-/* MISSION */
-.mission{
-padding:100px 10%;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-}
-
-.card{
-background:white;
-padding:40px;
-border-radius:30px;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
-transition:.4s;
-text-align:center;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card h2{
-color:#0d5c2f;
-margin-bottom:20px;
-}
-
-/* STATS */
-.stats{
-background:#0d5c2f;
-padding:80px 10%;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-text-align:center;
-gap:20px;
-}
-
-.stat-card h1{
-font-size:55px;
-color:gold;
-}
-
-.stat-card p{
-color:white;
-font-size:18px;
-}
-
-/* WHY */
-.why-rwanda{
-padding:100px 10%;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.why-card{
-background:white;
-padding:40px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
-transition:.4s;
-}
-
-.why-card:hover{
-transform:translateY(-10px);
-}
-
-.why-card h3{
-color:#0d5c2f;
-margin-bottom:15px;
-}
-
-/* CTA */
-.cta{
-padding:120px 20px;
-text-align:center;
-background:
-linear-gradient(rgba(0,80,0,.8),rgba(0,80,0,.8)),
-url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3')
-center/cover;
-}
-
-.cta h2{
-font-size:60px;
-color:gold;
-margin-bottom:20px;
-}
-
-.cta p{
-color:white;
-font-size:22px;
-margin-bottom:30px;
-}
-
-.cta button{
-padding:18px 40px;
-border:none;
-background:gold;
-font-size:18px;
-border-radius:40px;
-cursor:pointer;
-font-weight:bold;
-}
-
-/* MOBILE */
-@media(max-width:900px){
-
-.hero-content h1{
-font-size:50px;
-}
-
-.about-grid,
-.mission,
-.stats,
-.why-grid{
-grid-template-columns:1fr;
-}
-
-.section-title h2{
-font-size:40px;
-}
+@media (max-width: 860px) {
+  .story,
+  .values,
+  .gallery-strip {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
-```
